@@ -19,8 +19,28 @@
 
         <dependency>
             <groupId>com.lft</groupId>
-            <artifactId>i-model</artifactId>
+            <artifactId>imodel</artifactId>
             <version>0.0.1.PREVIEW</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!--源码打包配置-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
